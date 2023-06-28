@@ -10,6 +10,30 @@ import { useState } from "react";
 const FormContainer = styled.div`
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
+
+  form {
+    display: flex;
+    align-items: center;
+  }
+
+  input {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
 `;
 
 type TaskFormProps = {
