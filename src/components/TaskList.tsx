@@ -1,17 +1,21 @@
 //  Ce composant sera responsable de l'affichage de la liste des tâches.
 //Il itérera sur les données des tâches et rendra un composant TaskItem pour chaque tâche.
 import TaskItem from "./TaskItem";
-
 import styled from "styled-components";
-import { Task } from "../types/task"
+import { Task } from "../types/task";
 
-
+type TaskListProps = {
+  tasks: Task[];
+  onDeleteTask: (task: Task) => void;
+  onEditTask: (task: Task) => void;
+  onCompleteTask: (task: Task) => void;
+};
 
 const TaskListContainer = styled.div`
   display: flex;
   justify-content: center;
 `;
 
-export default function TaskList() {
+export default function TaskList(props: TaskListProps) {
   return <TaskListContainer></TaskListContainer>;
 }
