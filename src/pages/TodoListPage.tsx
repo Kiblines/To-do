@@ -1,9 +1,17 @@
+import TaskList from "../components/TaskList";
+import TaskItem from "../components/TaskItem";
+import { Task } from "../types/task";
 
-
+c;
 
 export default function ToDoListPage() {
-  return (
-    <div><p>
-        Coucou les loulou ceci test un test</p></div>
-  )
+  const DeleteTask = (task: Task) => {
+    console.log(task);
+  };
+
+  const EditTask = (task: Task) => {
+    console.log(task);
+  };
+
+  return <TaskItem OnDeleteTask={(Toto: Task) => {}}></TaskItem>;
 }

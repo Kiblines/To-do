@@ -15,7 +15,7 @@ type TaskProps = {
 };
 
 function TaskItem(props: TaskProps) {
-  const { task, onDeleteTask, onEditTask, onCompleteTask } = props;
+  const { task, onDeleteTask, onEditTask , onCompleteTask } = props;
   const [isEditing, setIsEditing] = useState(false);
   const [taskName, setTaskName] = useState(task.name);
 
@@ -26,6 +26,14 @@ function TaskItem(props: TaskProps) {
         onChange={() => onCompleteTask(task)}
         checked={task.isCompleted}
       />
+      {isEditing ? (
+        <input
+        type="text"
+        value={task.name}
+        
+        />
+      )
+      :};
     </ItemContainer>
   );
 }
